@@ -5,3 +5,4 @@ for k in range(len(D)):
         for j in range(len(D)):
             D[i][j] = min(D[i][k] + D[k][j], D[i][j])
 [print(*map(int, line)) for line in D]
+
