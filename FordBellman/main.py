@@ -7,4 +7,4 @@ for k in range(n):
     for i in range(n):
         d[k][x] = 0
         d[k][i] = min([d[k-1][j] + C[j][i] for j in range(n)])
-[print(*_) for _ in d]
+[print(*line) for line in d]
