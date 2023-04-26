@@ -1,5 +1,5 @@
 with open('Input.txt', 'r') as Inp:
-    C = [[float(j) for j in i.split()] for i in Inp.read().split('\n')]
+    C = [list(map(float, line.split())) for line in Inp.read().split('\n')]
 n = len(C)
 d = [[float('inf') for _ in range(n)] for _ in range(n)]
 x = 0   # int(input())
