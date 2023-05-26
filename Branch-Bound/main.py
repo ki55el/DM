@@ -1,4 +1,4 @@
-def minG(inp):
+def min_G(inp):
     return min([G[m][inp] for m in range(n)])
 
 
@@ -22,7 +22,7 @@ for num in range(len(G)-2):
     print()
 
     for j in range(n):
-        min_row = minG(j)
+        min_row = min_G(j)
         if min_row != float('inf'):
             count += min_row
             for i in range(n):
@@ -35,7 +35,7 @@ for num in range(len(G)-2):
         for j in range(n):
             if G[i][j] == 0.0:
                 G[i][j] = float('inf')
-                zeros.append((min(G[i]) + minG(j), i, j))
+                zeros.append((min(G[i]) + min_G(j), i, j))
                 G[i][j] = 0.0
     arg, v, u = max(zeros)
     G[u][v] = float('inf')
@@ -43,3 +43,4 @@ for num in range(len(G)-2):
         G[x][u] = float('inf')
         G[v][x] = float('inf')
     [print(*line) for line in G]
+
